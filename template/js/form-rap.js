@@ -16,8 +16,8 @@ $(document).ready(function () {
       var _0x7165x6 = $("#Telephone").val();
       $("#form_submit_rapp_btn").text("En traitement...");
       $("#form_submit_rapp_btn").attr("disabled", true);
-      $.ajax({type: "POST", url: $("#form_submit_rapp").attr("action"), data: $('#form_submit_rapp').serialize(), success: function (_0x7165x7) {
-        $("#rapp-grat").children("#form_dem_content").hide();
+      
+      $("#rapp-grat").children("#form_dem_content").hide();
         $(".title-rapp").text("Demande de rappel bien enregistrée.").css('color', '#70ad47');
         $("#form_dem_content").hide();
         if ($("#rapp-grat .col-form-rap").length) {
@@ -28,14 +28,7 @@ $(document).ready(function () {
         $("#Telephone").val("");
         $("#form_submit_rapp_btn").attr("disabled", false);
         $("#form_submit_rapp_btn").text("Envoyer");
-      }, error: function (_0x7165x7) {
-        $("#rapp-grat").children("#form_dem_content").hide();
-        $(".title-rapp").text("Une erreur est survenue. veuillez réessayer plus tard.");
-        $("#Nom").val("");
-        $("#Telephone").val("");
-        $("#form_submit_rapp_btn").attr("disabled", false);
-        $("#form_submit_rapp_btn").text("Envoyer");
-      }});
+        
     }});
     $(document).on("click", ".popup-rapp-grat-dismiss", function (_0x7165x8) {
       $.magnificPopup.close();
