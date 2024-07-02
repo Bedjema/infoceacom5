@@ -18,17 +18,20 @@ $(document).ready(function () {
       $("#form_submit_rapp_btn").attr("disabled", true);
       $.ajax({type: "POST", url: $("#form_submit_rapp").attr("action"), data: $('#form_submit_rapp').serialize(), success: function (_0x7165x7) {
         $("#rapp-grat").children("#form_dem_content").hide();
-        $(".title-rapp").text("Demande de rappel bien enregistrée.");
-        if ($("#rapp-grat").length) {
-          $("#rapp-grat").append('<div class="text-dark text-center p-4" id="form_hr_rapp"><B>Nous vous rappelons dans quelques instants..</B></div>');
+        $(".title-rapp").text("Demande de rappel bien enregistrée.").css('color', '#70ad47');
+        $("#form_dem_content").hide();
+        if ($("#rapp-grat .col-form-rap").length) {
+          $("#rapp-grat .col-form-rap").append('<div class="text-dark text-left pt-5" id="form_hr_rapp">Nous vous rappelons dans quelques instants..</div>');
         }
         ;
+        $("#Nom").val("");
         $("#Telephone").val("");
         $("#form_submit_rapp_btn").attr("disabled", false);
         $("#form_submit_rapp_btn").text("Envoyer");
       }, error: function (_0x7165x7) {
         $("#rapp-grat").children("#form_dem_content").hide();
         $(".title-rapp").text("Une erreur est survenue. veuillez réessayer plus tard.");
+        $("#Nom").val("");
         $("#Telephone").val("");
         $("#form_submit_rapp_btn").attr("disabled", false);
         $("#form_submit_rapp_btn").text("Envoyer");
@@ -36,12 +39,14 @@ $(document).ready(function () {
     }});
     $(document).on("click", ".popup-rapp-grat-dismiss", function (_0x7165x8) {
       $.magnificPopup.close();
-      $(".title-rapp").text("Veuillez saisir votre numéro de téléphone");
+      $("#form_dem_content").show();
+      $(".title-rapp").text("Veuillez saisir votre numéro de téléphone").css('color', '#1456a0');
       $("#rapp-grat").children("#form_dem_content").show();
       if ($("#form_hr_rapp").length) {
-        $("#rapp-grat").children("#form_hr_rapp").remove();
+        $("#rapp-grat .col-form-rap").children("#form_hr_rapp").remove();
       }
       ;
+      $("#Nom").val("");
       $("#Telephone").val("");
     });
   });

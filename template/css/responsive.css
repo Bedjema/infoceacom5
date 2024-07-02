@@ -15,7 +15,10 @@
   }
 }
 @media only screen and (max-width: 991px) {
-    
+  #rapp-grat {
+    background-image: none;
+    background-color: #fff;
+  }
   .label_plat.mob {
     float: right;
     width: 105px;

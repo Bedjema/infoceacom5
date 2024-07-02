@@ -11,26 +11,19 @@ $(document).ready(function () {
         $(".asur-form").find(".form-control").removeClass("light").dequeue();
       });
   }
-  $("#Motif").attr("style", "color: #1456a0 !important;");
-  $("#Motif option").attr("style", "color: #000000 !important;");
-  $("#Motif").change(function () {
-    var _0x576cx1 = $("#Motif").val();
-    if (_0x576cx1 != "") {
-      $("#Motif").attr("style", "color: #000000 !important;");
-    } else {
-      $("#Motif").attr("style", "color: #1456a0 !important;");
-    }
-  });
-  $("#Type").attr("style", "color: #1456a0 !important;");
-  $("#Type option").attr("style", "color: #000000 !important;");
-  $("#Type").change(function () {
-    var _0x576cx1 = $("#Type").val();
-    if (_0x576cx1 != "") {
-      $("#Type").attr("style", "color: #000000 !important;");
-    } else {
-      $("#Type").attr("style", "color: #1456a0 !important;");
-    }
-  });
+  $('.asur-form select').each(function(i, obj) {
+    $(this).attr("style", "color: #1456a0 !important;");
+    $(this).find('option:selected').attr("style", "color: #000000 !important;");
+    $(this).change(function () {
+      var _0x576cx1 = $(this).val();
+      if (_0x576cx1 != "") {
+        $(this).attr("style", "color: #000000 !important;");
+      } else {
+        $(this).attr("style", "color: #1456a0 !important;");
+      }
+    });
+});
+
   $(".dem_devis").click(function () {
     $("html,body").animate(
       { scrollTop: $("#form-dem-con").offset().top },
@@ -129,7 +122,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   if ($(".form_date_mask")[0]) {
-    $(".form_date_mask").inputmask({ mask: "99/99/9999" });
+    $(".form_date_mask").mask("00/00/0000");
   }
 });
 $("#form_submit_dem_glob").validate({
