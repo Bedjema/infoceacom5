@@ -48,22 +48,22 @@ $(document).ready(function() {
         },
         messages: {
             Nom: {
-                required: "- Veuillez saisir votre nom car il est obligatoire.",
+                required: "- Le nom est requis",
                 maxlength: "- le champ de nom ne devrait pas dépasser {0} caractères."
             },
             Prenom: {
-                required: "- Veuillez saisir votre prénom car il est obligatoire.",
+                required: "- Le prénom est requis",
                 maxlength: "- le champ de la prénom ne devrait pas dépasser {0} caractères."
             },
             Num_contract: {
-                required: "- Veuillez saisir votre numéro de contrat car il est obligatoire.",
+                required: "- Le numéro de contrat est requis",
                 maxlength: "- le champ de la numéro de contrat ne devrait pas dépasser {0} caractères."
             },
             'Nature_reclamation[]': {
-                required: "- Veuillez sélectionner votre nature de la réclamation car il est obligatoire."
+                required: "- La nature de la réclamation est requis"
             },
             Message_rec: {
-                required: "- Veuillez saisir votre message car il est obligatoire."
+                required: "- Le message de la réclamation est requis"
             }
         },
         submitHandler: function(form) {

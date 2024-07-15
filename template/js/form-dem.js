@@ -58,6 +58,7 @@ $(document).ready(function () {
       Marque: { required: false, maxlength: 50 },
       Motif: { required: false, maxlength: 100 },
       Type: { required: false, maxlength: 100 },
+      ModelelTxt: { required: false },
       Email: {
         required: true,
         regex: /^\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i,
@@ -66,17 +67,17 @@ $(document).ready(function () {
     },
     messages: {
       Nom: {
-        required: "- Veuillez saisir votre nom car il est obligatoire.",
+        required: "- Le nom est requis",
         maxlength: "- le champ de nom ne devrait pas dépasser {0} caractères.",
       },
       Prenom: {
-        required: "- Veuillez saisir votre prénom car il est obligatoire.",
+        required: "- Le prénom est requis",
         maxlength:
           "- le champ de la prénom ne devrait pas dépasser {0} caractères.",
       },
       Telephone: {
         required:
-          "- Veuillez saisir votre numéro de téléphone car il est obligatoire.",
+          "- Le numéro de téléphone est requis",
         maxlength:
           "- le champ de la numéro de téléphone ne devrait pas dépasser {0} caractères.",
         regex: "- Veuillez saisir un numéro de téléphone valide.",
@@ -98,7 +99,7 @@ $(document).ready(function () {
       },
       Email: {
         required:
-          "- Veuillez saisir votre adresse email car il est obligatoire.",
+          "- L’adresse e-mail est requise",
         maxlength:
           "- le champ d'adresse e-mail ne devrait pas dépasser {0} caractères.",
         regex: "- Veuillez saisir un adresse e-mail valide.",
@@ -146,17 +147,17 @@ $("#form_submit_dem_glob").validate({
   },
   messages: {
     Nom: {
-      required: "- Veuillez saisir votre nom car il est obligatoire.",
+      required: "- Le nom est requis",
       maxlength: "- le champ de nom ne devrait pas dépasser {0} caractères.",
     },
     Prenom: {
-      required: "- Veuillez saisir votre prénom car il est obligatoire.",
+      required: "- Le prénom est requis",
       maxlength:
         "- le champ de la prénom ne devrait pas dépasser {0} caractères.",
     },
     Telephone: {
       required:
-        "- Veuillez saisir votre numéro de téléphone car il est obligatoire.",
+        "- Le numéro de téléphone est requis",
       maxlength:
         "- le champ de la numéro de téléphone ne devrait pas dépasser {0} caractères.",
       regex: "- Veuillez saisir un numéro de téléphone valide.",
@@ -169,7 +170,7 @@ $("#form_submit_dem_glob").validate({
       regex: "- Veuillez saisir un code postal valide.",
     },
     Email: {
-      required: "- Veuillez saisir votre adresse email car il est obligatoire.",
+      required: "- L’adresse e-mail est requise",
       maxlength:
         "- le champ d'adresse e-mail ne devrait pas dépasser {0} caractères.",
       regex: "- Veuillez saisir un adresse e-mail valide.",
@@ -204,17 +205,17 @@ $("#form_submit_dem_imm").validate({
     },
     messages: {
       Nom: {
-        required: "- Veuillez saisir votre nom car il est obligatoire.",
+        required: "- Le nom est requis",
         maxlength: "- le champ de nom ne devrait pas dépasser {0} caractères.",
       },
       Prenom: {
-        required: "- Veuillez saisir votre prénom car il est obligatoire.",
+        required: "- Le prénom est requis",
         maxlength:
           "- le champ de la prénom ne devrait pas dépasser {0} caractères.",
       },
       Telephone: {
         required:
-          "- Veuillez saisir votre numéro de téléphone car il est obligatoire.",
+          "- Le numéro de téléphone est requis",
         maxlength:
           "- le champ de la numéro de téléphone ne devrait pas dépasser {0} caractères.",
         regex: "- Veuillez saisir un numéro de téléphone valide.",
