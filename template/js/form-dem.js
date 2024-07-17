@@ -99,7 +99,7 @@ $(document).ready(function () {
       },
       Email: {
         required:
-          "- L’adresse e-mail est requise",
+          "- L’adresse mail est requise",
         maxlength:
           "- le champ d'adresse e-mail ne devrait pas dépasser {0} caractères.",
         regex: "- Veuillez saisir un adresse e-mail valide.",
@@ -170,7 +170,7 @@ $("#form_submit_dem_glob").validate({
       regex: "- Veuillez saisir un code postal valide.",
     },
     Email: {
-      required: "- L’adresse e-mail est requise",
+      required: "- L’adresse mail est requise",
       maxlength:
         "- le champ d'adresse e-mail ne devrait pas dépasser {0} caractères.",
       regex: "- Veuillez saisir un adresse e-mail valide.",
