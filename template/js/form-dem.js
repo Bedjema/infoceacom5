@@ -55,10 +55,10 @@ $(document).ready(function () {
         maxlength: 5,
         minlength: 5,
       },
-      Marque: { required: false, maxlength: 50 },
-      Motif: { required: false, maxlength: 100 },
+      Marque: { required: true, maxlength: 50 },
+      'Motif[]': { required: false, maxlength: 100 },
       Type: { required: false, maxlength: 100 },
-      ModelelTxt: { required: false },
+      ModelelTxt: { required: true },
       Email: {
         required: true,
         regex: /^\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i,
@@ -90,10 +90,18 @@ $(document).ready(function () {
         regex: "- Veuillez saisir un code postal valide.",
       },
       Marque: {
+        required:
+          "- La marque de voiture est requis",
         maxlength:
           "- le champ de la marque ne devrait pas dépasser {0} caractères.",
       },
-      Motif: {
+      ModelelTxt: {
+        required:
+          "- Le modèle de voiture est requis",
+        maxlength:
+          "- le champ de la marque ne devrait pas dépasser {0} caractères.",
+      },
+      'Motif[]': {
         maxlength:
           "- le champ de motif ne devrait pas dépasser {0} caractères.",
       },
