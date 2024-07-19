@@ -91,7 +91,7 @@ $(document).ready(function () {
       },
       Marque: {
         required:
-          "- La marque de voiture est requis",
+          "- La marque de voiture est requise",
         maxlength:
           "- le champ de la marque ne devrait pas dépasser {0} caractères.",
       },
